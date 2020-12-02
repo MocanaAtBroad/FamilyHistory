@@ -191,5 +191,7 @@ const robert: FamilyMember = {
 };
 const history = [ivanka, donald, ivana, fred, maryanne,milosz,marie,donjr,eric,tiffany,arabella,joseph,theodore,fredjr,maryannejr,elizabeth,
 robert];
+export {history};
 console.log(JSON.stringify(history));
+
 
