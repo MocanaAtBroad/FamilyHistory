@@ -31,6 +31,10 @@ export interface FamilyMember {
      * If unknown or top of tree value will be null
      */
     mother: NodeId | null;
+    /**
+     * Used only if mother or father are not known. Example: paternal aunt
+     */
+    siblings?: Array<NodeId>;
     sex?: Sex;
     /**
      * Should include here the relation name as used in the activities

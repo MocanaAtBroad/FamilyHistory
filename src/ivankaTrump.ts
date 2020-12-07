@@ -116,8 +116,22 @@ const tiffany: FamilyMember = {
   relation: "half-sister (father's side)"
 };
 
-const arabella: FamilyMember = {
+const barron: FamilyMember = {
   id: 11,
+  sex: "F",
+  father: donald.id,
+  mother: null,
+  isParticipant: false,
+  medicalHistoryCompleted: false,
+  medicalHistory: [
+    { type: "Activity", activityCode: "FAMHIST" },
+    { type: "Activity", activityCode: "SIBLING" }
+  ],
+  relation: "half-brother (father's side)"
+};
+
+const arabella: FamilyMember = {
+  id: 12,
   sex: "F",
   father: null,
   mother: 1,
@@ -131,20 +145,6 @@ const arabella: FamilyMember = {
 };
 
 const joseph: FamilyMember = {
-  id: 12,
-  sex: "M",
-  father: null,
-  mother: 1,
-  isParticipant: false,
-  medicalHistoryCompleted: false,
-  medicalHistory: [
-    { type: "Activity", activityCode: "FAMHIST" },
-    { type: "Activity", activityCode: "CHILDREN" }
-  ],
-  relation: "son"
-};
-
-const theodore: FamilyMember = {
   id: 13,
   sex: "M",
   father: null,
@@ -158,11 +158,26 @@ const theodore: FamilyMember = {
   relation: "son"
 };
 
-const fredjr: FamilyMember = {
+const theodore: FamilyMember = {
   id: 14,
   sex: "M",
-  father: 4,
-  mother: 5,
+  father: null,
+  mother: 1,
+  isParticipant: false,
+  medicalHistoryCompleted: false,
+  medicalHistory: [
+    { type: "Activity", activityCode: "FAMHIST" },
+    { type: "Activity", activityCode: "CHILDREN" }
+  ],
+  relation: "son"
+};
+
+const fredjr: FamilyMember = {
+  id: 15,
+  sex: "M",
+  father: null,
+  mother: null,
+  siblings: [donald.id],
   isParticipant: false,
   medicalHistoryCompleted: false,
   medicalHistory: [
@@ -173,10 +188,11 @@ const fredjr: FamilyMember = {
 };
 
 const maryannejr: FamilyMember = {
-  id: 15,
+  id: 16,
   sex: "F",
-  father: 4,
-  mother: 5,
+  father: null,
+  mother: null,
+  siblings: [donald.id],
   isParticipant: false,
   medicalHistoryCompleted: false,
   medicalHistory: [
@@ -187,10 +203,11 @@ const maryannejr: FamilyMember = {
 };
 
 const elizabeth: FamilyMember = {
-  id: 16,
+  id: 17,
   sex: "F",
-  father: 4,
-  mother: 5,
+  father: null,
+  mother: null,
+  siblings: [donald.id],
   isParticipant: false,
   medicalHistoryCompleted: false,
   medicalHistory: [
@@ -201,10 +218,11 @@ const elizabeth: FamilyMember = {
 };
 
 const robert: FamilyMember = {
-  id: 17,
+  id: 18,
   sex: "M",
-  father: 4,
-  mother: 5,
+  father: null,
+  mother: null,
+  siblings: [donald.id],
   isParticipant: false,
   medicalHistoryCompleted: false,
   medicalHistory: [
@@ -224,6 +242,7 @@ const history = [
   donjr,
   eric,
   tiffany,
+  barron,
   arabella,
   joseph,
   theodore,
